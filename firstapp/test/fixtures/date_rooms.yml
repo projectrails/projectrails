@@ -1,0 +1,13 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/Fixtures.html
+
+one:
+  reserve_user: MyString
+  busy_end: 2014-05-19
+  busy_start: 2014-05-19
+  room_id_id: 1
+
+two:
+  reserve_user: MyString
+  busy_end: 2014-05-19
+  busy_start: 2014-05-19
+  room_id_id: 1

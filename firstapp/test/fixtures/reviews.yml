@@ -1,0 +1,13 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/Fixtures.html
+
+one:
+  myreview: MyString
+  myreview_user: MyString
+  myreview_date: 2014-05-17
+  myreview_id: 1
+
+two:
+  myreview: MyString
+  myreview_user: MyString
+  myreview_date: 2014-05-17
+  myreview_id: 1

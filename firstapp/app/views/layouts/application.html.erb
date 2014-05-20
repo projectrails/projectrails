@@ -1,0 +1,54 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head>
+<title>Five Star Hotel</title>
+
+  <%= stylesheet_link_tag    "application", :media => "all" %>
+  <%= javascript_include_tag "application" %>
+
+ 
+  <%= stylesheet_link_tag    "ie_style", :media => "all" %>
+  <%= stylesheet_link_tag    "layout", :media => "all" %>
+  <%= stylesheet_link_tag    "style", :media => "all" %>
+
+  
+  
+  <%= javascript_include_tag "ie_png" %>
+  <%= javascript_include_tag "maxheight" %>
+  
+   
+  <%= csrf_meta_tags %>
+
+
+
+</head>
+  
+  
+<body id="page1" onload="new ElementMaxHeight();">
+  
+  
+  <!-- to check user  -->
+  <div id="client_nav">
+    
+  <% if current_client %>
+    
+    Logged in as <%= current_client.email %>.
+    
+    <%= link_to "log_out", log_out_path %>
+  <% else %>
+    <%= link_to "sign_up", sign_up_path %> or
+    <%= link_to "log_in", log_in_path %>
+  <% end %>
+</div>
+  
+  
+  
+<% flash.each do |name, msg| %>
+  <%= content_tag :div, msg, :id => "flash_#{name}" %>
+<% end %>
+
+<%= yield %>
+
+</body>
+  
+</html>
